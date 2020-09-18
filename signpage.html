@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style>
+    body {
+
+
+          background-image: url("images/123.png");
+          background-position:center;
+          background-size: cover;
+          height: 900px;
+          font-family: sans-serif;
+          margin-top: 40px;
+          margin-left: 40px;
+          }
+  .box{
+               text-align: center;
+                background-color: rgb(0,0,0,0.7);
+                margin-left: 40px;
+                width: 800px;
+                margin: auto;
+                position: relative;
+                text-align: center
+                border-radius: 15px 15px 0px 0px;
+                padding:10px 0px 10px 0px;
+                border-radius: 15px;
+              }
+
+   .btn input[type="submit"]{
+              border: 0;
+              background-color: rgb(4,4,14,0.5);
+              display: block;
+              margin: 20px auto;
+              text-align: center;
+              border :2px solid #0739a6;
+              padding: 14px 40px;
+              width: 200px;
+              outline: none;
+              color: white;
+              border-radius: 24px;
+              transition: 0.25s;
+              }
+    .bx{
+      text-align: center;
+       background-color: #191919;
+       margin-left: 40px;
+       width: 500px;
+       margin: auto;
+       position: relative;
+       text-align: center
+       border-radius: 15px 15px 0px 0px;
+       padding:10px 0px 10px 0px;
+       border-radius: 15px;
+       background-color: rgb(255,255,250,0.2);
+
+    }
+    .box h1{
+      color: white;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .box h1:hover{
+      color: #a8a800;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .box h2:hover{
+      color: #a8a800;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .box h2{
+      color: white;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .box input[type="text"], .box input[type="password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border :2px solid #3499db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    }
+    .box input[type="text"]:hover, .box input[type="password"]:hover{
+      width: 280px;
+      border-color: #db1200
+    }
+    .box input[type="submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border :2px solid #2ecc71;
+    padding: 14px 40px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    }
+
+
+  </style>
+  <body>
+
+
+    <form class="box" action="sign.php" method="post">
+      <h1>Online Election System<hr></h1> &nbsp;&nbsp;
+      <br><h2>Login</h2>
+      <input type="text" name="nid" placeholder="NID Number" value="">
+
+      <input type="password" name="pass" placeholder="Password"value="">
+      <br><br>
+      <input type="submit" name="" value="Login">
+      <br><br><br>
+
+    </form>
+  <br><br>
+    <div class="bx">
+
+
+        <a class="btn" href="Registration.html"><input type="submit" name="" value="Registration"></input></a>
+        <a class="btn" href="adminlog.html"><input type="submit" name="" value="Admin Login"></input></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+You have to manually run the createDB.php file to create the database with table. then u can run the Homepage.html file
