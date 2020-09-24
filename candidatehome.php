@@ -7,8 +7,8 @@
   }
 
 	else {
-    echo"<script>alert('Please Log In first!')</script> ";
-    header("Location: adminlog.html");
+		echo"<script>alert('Please Log In first!');
+	   window.location = 'adminlog.html';</script> ";
 
 	}
 
@@ -99,7 +99,7 @@
       <br>
       <a href="candidate.php"><button class=" " type="Signin" name="sgin">View All Candidate</button></a>
       <br>
-      <a href="regcandidate.html"><button class=" " type="Signin" name="sgin">Add Candidate</button></a>
+      <a href="regcandidate.php"><button class=" " type="Signin" name="sgin">Add Candidate</button></a>
       <br>
       <a href="remcandidate.php"><button class=" " type="Signin" name="sgin">Remove Candidate</button></a>
 

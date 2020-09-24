@@ -6,8 +6,9 @@
   }
 
 	else {
-    echo"<script>alert('Please Log In first!')</script> ";
-    header("Location: adminlog.html");
+		echo"<script>alert('Please Log In first!');
+	   window.location = 'adminlog.html';</script> ";
+    
 
 	}
 

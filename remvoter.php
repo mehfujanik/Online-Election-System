@@ -6,8 +6,8 @@ if(isset($_SESSION['username']) && isset($_SESSION['pass']))
 }
 
 else {
-  echo"<script>alert('Please Log In first!')</script> ";
-  header("Location: adminlog.html");
+  echo"<script>alert('Please Log In first!');
+   window.location = 'adminlog.html';</script> ";
 
 }
     $servername = "localhost";
@@ -23,6 +23,15 @@ else {
 
     $fullname=$_POST['uname'];
     $nid=$_POST['nid'];
+    $sql="SELECT * FROM person WHERE NID='$nid' AND FullName= '$fullname'";
+
+    $rslt=mysqli_query($dbs,$sql);
+
+
+
+    if(mysqli_num_rows($rslt)>0)
+      {
+
 
 
     $sql= "DELETE FROM person where FullName='$fullname' AND NID='$nid'";
@@ -32,6 +41,10 @@ else {
   echo"<script>alert('Record deleted successfully!')</script> ";
 } else {
   echo"<script>alert('Error deleting record!')</script> ".$dbs->error;
+}
+}
+
+else { echo"<script>alert('No user found!')</script> ";
 }
 
   mysqli_close($dbs);

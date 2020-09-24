@@ -42,7 +42,7 @@ if(mysqli_num_rows($rslt)>0)
   }
   $Ballot= $temp+1;
 
-  $sql="SELECT * FROM person WHERE NID='$Nid'";
+  $sql="SELECT * FROM candidate WHERE NID='$Nid'";
 
   $rslt=mysqli_query($dbs,$sql);
 
@@ -94,7 +94,7 @@ if ($fullname==NULL  or $father==NULl or $Address==NULl or $mother==NULL or $Nid
 
   }
   else {
-    echo"<script>alert('successfully inserted!')</script> ";
+    echo"<script>alert('Succesfully inserted!')</script>";
   }
 
 }

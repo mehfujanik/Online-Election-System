@@ -1,2 +1,1 @@
-Create a database named 'reg' and use the sql queries to import ta table and data. 
-Then u can simply run the project. If u are having problem with the values , then first insert 1 or 2 rows in each table manually from xampp server.
+Create a database named reg , then import the queries from reg(1).sql file. then u can run the project

@@ -7,8 +7,8 @@
   }
 
 	else {
-    echo"<script>alert('Please Log In first!')</script> ";
-    header("Location: adminlog.html");
+		echo"<script>alert('Please Log In first!');
+	   window.location = 'adminlog.html';</script> ";
 
 	}
 
@@ -40,9 +40,9 @@
                       background-image: url("97.jpg");
                       background-position:center;
                       background-size: cover;
-                      height: 900px;
+                      height: 600px;
                       font-family: sans-serif;
-                      margin-top: 40px;
+                      
                       margin-left: 40px;
                       }
 
@@ -61,7 +61,7 @@
                 border-radius: 24px;
 
                                   }
-					
+
   </style>
   <body>
     <table>
@@ -88,8 +88,6 @@
     if (!$dbs) {
         die("Connection failed: " . mysqli_connect_error());
     }
-
-
 
 
     $sql= "SELECT * FROM person ";

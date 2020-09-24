@@ -37,8 +37,9 @@
   }
 
 	else {
-    echo"<script>alert('Please Log In first!')</script> ";
-   header("Location: signpage.html");
+    echo"<script>alert('Please Log In first!');
+	   window.location = 'signpage.html';</script> ";
+  
 
 	}
 

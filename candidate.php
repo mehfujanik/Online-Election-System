@@ -1,4 +1,19 @@
 <!DOCTYPE html>
+<?php
+  session_start();
+	if(isset($_SESSION['username']) && isset($_SESSION['pass']))
+  {
+
+  }
+
+	else {
+		echo"<script>alert('Please Log In first!');
+	   window.location = 'adminlog.html';</script> ";
+
+
+	}
+
+?>
 
 <html >
   <head>
@@ -93,7 +108,7 @@
         echo"Error".mysqli_error($dbs);
       }
 
-      
+
 
 
     ?>

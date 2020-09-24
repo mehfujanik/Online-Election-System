@@ -21,14 +21,18 @@ $Address=$_POST['address'];
 $date=$_POST['Date'];
 
 $Ps=$_POST['pass'];
+$year=date('Y', strtotime($date));
 
 
 if ($Ps==NULL or $father==NULl or $Address==NULl or $mother==NULL or $date==NULl ) {
   echo "U need to fill up all field";
 } else {
 
-
-      if (strlen($Ps) <= '8') {
+  if ($year>2002) {
+    echo"<script>alert('Inappropiate Age!')</script> ";
+    mysqli_close($dbs);
+  }
+      if (strlen($Ps) < '8') {
           echo "Your Password Must Contain At Least 8 Characters!";
             mysqli_close($dbs);
               }
@@ -46,7 +50,7 @@ if ($Ps==NULL or $father==NULl or $Address==NULl or $mother==NULL or $date==NULl
           }
 
 
-        if (strlen($father) <= '5' or strlen($father) >= '25') {
+        if (strlen($father) <= '8' ) {
           echo "Your Father's name Must Contain At Least 8 Characters!";
           mysqli_close($dbs);
             }
@@ -67,9 +71,10 @@ if ($Ps==NULL or $father==NULl or $Address==NULl or $mother==NULL or $date==NULl
 }
 
  {
-//  echo "string".$_SESSION['nid'].$_SESSION['pass'];
-  echo"<script>alert('Please Log In first!')</script> ";
- header("Location: signpage.html");
+//
+  echo"<script>alert('Please Log In first!');
+   window.location = 'signpage.html';</script> ";
+ //header("Location: signpage.html");
 
 }
 

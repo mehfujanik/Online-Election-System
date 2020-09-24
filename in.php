@@ -48,7 +48,7 @@ if ($fullname==NULL or $Ps==NULL or $father==NULl or $Address==NULl or $mother==
     mysqli_close($dbs);
   }
 
-  elseif (strlen($Ps) <= '8') {
+  elseif (strlen($Ps) < '8') {
       echo "Your Password Must Contain At Least 8 Characters!";
       mysqli_close($dbs);
   }
@@ -93,7 +93,8 @@ if ($fullname==NULL or $Ps==NULL or $father==NULl or $Address==NULl or $mother==
 
   }
   else {
-    echo"<script>alert('successfully inserted!')</script> ";
+    echo"<script>alert('Succesfully inserted!');
+	   window.location = 'signpage.html';</script> ";
   }
 
 }
