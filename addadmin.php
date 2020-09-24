@@ -14,6 +14,20 @@ if (!$dbs) {
 $Uname=$_POST['uname'];
 $Ps=$_POST['pass'];
 
+$sql="SELECT * FROM admin WHERE Username='$Uname'";
+
+$rslt=mysqli_query($dbs,$sql);
+
+
+
+if(mysqli_num_rows($rslt)>0)
+  {
+    echo"<script>alert('Username Already Regsitered; Use a different UserName!')</script> ";
+    mysqli_close($dbs);
+
+  }
+  else {
+
 
 if ($Uname==NULL or $Ps==NULL ) {
   echo "U need to fill up all field";
@@ -45,6 +59,7 @@ if ($Uname==NULL or $Ps==NULL ) {
     echo"successfully inserted";
   }
 
+}
 }
 
 mysqli_close($dbs);

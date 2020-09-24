@@ -1,4 +1,18 @@
 <!DOCTYPE html>
+<?php
+session_start();
+if(isset($_SESSION['username']) && isset($_SESSION['pass']))
+{
+
+}
+
+else {
+  echo"<script>alert('Please Log In first!')</script> ";
+  header("Location: adminlog.html");
+
+}
+
+ ?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">

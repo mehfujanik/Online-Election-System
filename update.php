@@ -52,7 +52,7 @@ if ($Ps==NULL or $father==NULl or $Address==NULl or $mother==NULL or $date==NULl
             }
 
 
-  $sql= "UPDATE person set Father='$father', Mother='$mother', Address='$Address', DOB=$date,Pass='$Ps' WHERE NID='$Nid'";
+  $sql= "UPDATE person set Father='$father', Mother='$mother', Address='$Address', DOB='$date',Pass='$Ps' WHERE NID='$Nid'";
   if(!mysqli_query($dbs,$sql))
   {
     echo "Not inserted".mysqli_error($dbs);
