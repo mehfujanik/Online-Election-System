@@ -48,6 +48,11 @@
                 border-radius: 24px;
 
                                   }
+                                  h1{
+                                    color: red;
+                                    text-align: center;
+                                    font-size: 50px;
+                                  }
   </style>
   <body>
     <table>
@@ -58,6 +63,18 @@
 
 
 <?php
+session_start();
+if(isset($_SESSION['username']) && isset($_SESSION['pass']))
+{
+
+}
+
+else {
+  echo"<script>alert('Please Log In first!')</script> ";
+  header("Location: adminlog.html");
+
+}
+
 
     $servername = "localhost";
     $username = "root";
@@ -90,6 +107,23 @@
         echo"Error".mysqli_error($dbs);
       }
 
+
+
+
+      $sql= "SELECT * FROM candidate Where VoteCount=(select max(VoteCount) FROM candidate) ";
+      $result=mysqli_query($dbs,$sql);
+      echo "<table>";
+        echo "<br><h1>Winner<hr></h1><th>FullName</th>
+        <th>Ballot No</th>
+        <th>Total Vote</th>";
+      if(mysqli_num_rows($result)>0)
+        {
+          while($row=mysqli_fetch_assoc($result)){
+          echo "<tr><td>".$row["FullName"]."</td><td>".$row["Ballot"]."</td><td>".$row["VoteCount"]."</td><tr><br>";
+            }
+            echo "</table>";
+
+      }
       $sql= "SELECT * FROM freeze";
       $result=mysqli_query($dbs,$sql);
 
@@ -98,12 +132,9 @@
 
       $sql="UPDATE freeze SET  value = 0";
       $result=mysqli_query($dbs,$sql);
-
-
-
     ?>
 
 
-</table>
+
   </body>
 </html>
