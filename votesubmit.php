@@ -34,7 +34,7 @@ else {
   $sql="UPDATE candidate SET  VoteCount = VoteCount + 1
   WHERE Ballot='$Vote'";
   $result=mysqli_query($dbs,$sql);
-  $sql="UPDATE person SET  vote = 1";
+  $sql="UPDATE person SET  vote = 1 WHERE NID='$Nid'";
   $result=mysqli_query($dbs,$sql);
 }
     mysqli_close($dbs);
